@@ -1,0 +1,4 @@
+env
+arrayshop/products/*
+arrayshop/db.sqlite3
+__pycache__
