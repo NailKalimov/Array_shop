@@ -2,3 +2,4 @@ env
 arrayshop/products/*
 arrayshop/db.sqlite3
 __pycache__
+arrayshop\shop\migrations

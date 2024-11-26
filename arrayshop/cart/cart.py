@@ -36,7 +36,7 @@ class Cart:
         products = Product.objects.filter(id__in=product_ids)
         cart = self.cart.copy()
         for product in products:
-            cart[str(product.id)]['products'] = product
+            cart[str(product.id)]['product'] = product
         for item in cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
@@ -46,7 +46,8 @@ class Cart:
         return sum(item['quantity'] for item in self.cart.values())
 
     def get_total_price(self):
-        return sum(Decimal(item['price'] * item['quantity'] for item in self.cart.values()))
+        return sum(Decimal(item['price']) * item['quantity'] 
+                           for item in self.cart.values())
 
 
     def clear(self):

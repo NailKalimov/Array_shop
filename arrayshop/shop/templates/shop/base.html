@@ -12,10 +12,8 @@
     <header class="header">
         <div class="container-header">
             <a href="/" class='logo'><img src="{% static 'img/logo.png' %}" alt=""></a>
-
             <div class="cart-main">
-                Carts is empty
-                {% comment %} {% with total_items=cart|length %}
+                {% with total_items=cart|length %}
                     {% if total_items > 0 %}
                         <a href="{% url 'cart:cart_detail' %}" class="cart_btn">
                             {{ total_items }} item{{ total_items|pluralize }}
@@ -24,7 +22,7 @@
                     {% else %}
                     Cart is empty.
                     {% endif %}
-                {% endwith %} {% endcomment %}
+                {% endwith %}
             </div>
         </div>
     </header>
