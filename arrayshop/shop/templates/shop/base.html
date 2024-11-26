@@ -19,8 +19,8 @@
                             {{ total_items }} item{{ total_items|pluralize }}
                             ${{ cart.get_total_price }}
                         </a>
-                    {% else %}
-                    Cart is empty.
+                    {% elif not order %}
+                        Cart is empty.
                     {% endif %}
                 {% endwith %}
             </div>
