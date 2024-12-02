@@ -3,3 +3,5 @@ arrayshop/products/*
 arrayshop/db.sqlite3
 __pycache__
 migrations
+stripe_1.22.0_windows_x86_64
+static

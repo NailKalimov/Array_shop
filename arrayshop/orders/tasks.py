@@ -8,8 +8,8 @@ def order_created(order_id):
     order = Order.objects.get(id=order_id)
     subject = f'Order number {order_id}'
     message = f'Dear {order.first_name}\n\n'\
-    f'You have succefuly placed in order!\n'\
-    f'Your order ID is {order_id}.'
+                f'You have succefuly placed in order!\n'\
+                f'Your order ID is {order_id}.'
     mail_sent = send_mail(subject,
                           message,
                           from_email='admin@array.com',
